@@ -146,7 +146,7 @@
             label5.Name = "label5";
             label5.Size = new Size(202, 19);
             label5.TabIndex = 6;
-            label5.Text = "Лабараторная работа №3";
+            label5.Text = "Лабараторная работа №4";
             // 
             // label6
             // 
