@@ -123,30 +123,26 @@ namespace lb2_Burkeev_Dmitry
 
 
             f = false;
-            
+
+            mas2[N] = key + 1;
 
             int Gurianow = 0;
 
 
             int StartTime3 = Environment.TickCount;
-            while (mas2[Gurianow] < key)
-            {
-                Gurianow++;
-            }
+            while (mas2[Gurianow] < key) Gurianow++;
             //END TIME
             int ResultTime3 = Environment.TickCount - StartTime3;
 
-            if (Gurianow < N && mas2[Gurianow] == key) f = true;
-
+            if (mas2[Gurianow] == key) f = true;
+            textBox5.Text = ResultTime3.ToString();
             if (f)
             {
                 textBox7.Text = Gurianow.ToString();
-                textBox5.Text = ResultTime3.ToString();
             }
             else
             {
                 textBox7.Text = "Его нет";
-                textBox5.Text = ResultTime3.ToString();
             }
         }
     }
