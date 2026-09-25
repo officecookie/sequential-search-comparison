@@ -15,14 +15,8 @@ namespace lb2_Burkeev_Dmitry
             Random rnd = new Random();
             for (int i = 0; i < N; i++) mas1[i] = rnd.Next(1, N);
 
-
-
-
             Random rnd2 = new Random();
-            //это я сделал чтобы не с какогото там 23542 начинался, а именно с 1 и т.д. Но если хотите можно и убрать!
             mas2[0] = 1;
-
-
             for (int i = 1; i < N; i++)
             {
                 mas2[i] = mas2[i - 1] + rnd2.Next(1, 6);
@@ -31,8 +25,6 @@ namespace lb2_Burkeev_Dmitry
         private void button2_Click(object sender, EventArgs e)
         {
             int key = (int)numericUpDown2.Value;
-
-
 
             //lab2
             bool f = false;
@@ -68,29 +60,18 @@ namespace lb2_Burkeev_Dmitry
             int ResultTime2 = Environment.TickCount - StartTime2;
             if (masha < N) f = true;
 
+            textBox6.Text = ResultTime2.ToString();
             if (f)
             {
                 textBox8.Text = masha.ToString();
-                textBox6.Text = ResultTime2.ToString();
             }
             else
             {
                 textBox8.Text = "Его нет";
-                textBox6.Text = ResultTime2.ToString();
             }
         }
         private void Close_Click(object sender, EventArgs e)
         { Close(); }
-
-
-
-
-
-
-
-
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
